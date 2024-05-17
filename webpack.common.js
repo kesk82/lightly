@@ -55,10 +55,14 @@ module.exports = {
       template: 'src/index.html',
       filename: 'index.html'
     }),
-    // new HtmlWebpackPlugin({
-    //  template: 'src/portfolio.html',
-    //   filename: 'portfolio.html'
-    // }),
+    new HtmlWebpackPlugin({
+     template: 'src/generic.html',
+      filename: 'generic.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/elements.html',
+       filename: 'elements.html'
+     }),
     // new webpack.ProgressPlugin(), // display progress information while processing...
     // new webpack.DefinePlugin({
     //   'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH),
