@@ -32,15 +32,15 @@ if (toggleMobileNavigation) {
   });
 }
 
-const showMoreBtn = document.querySelector('#intro .actions a');
+// const showMoreBtn = document.querySelector('#intro .actions a');
 
-if (showMoreBtn) {
-  console.log("Found Show More BTN!");
-  showMoreBtn.addEventListener('click', e => {
-    e.preventDefault();
-    console.log("Click Show More BTN!!!");
-  });
-}
+// if (showMoreBtn) {
+//   console.log("Found Show More BTN!");
+//   showMoreBtn.addEventListener('click', e => {
+//     e.preventDefault();
+//     console.log("Click Show More BTN!!!");
+//   });
+// }
 
 const introContainer = document.getElementById('intro');
 
