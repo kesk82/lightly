@@ -53,16 +53,22 @@ module.exports = {
     // new Dotenv(),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
+      scriptLoading: 'defer',
+      minify: false
     }),
     new HtmlWebpackPlugin({
-     template: 'src/generic.html',
-      filename: 'generic.html'
+      template: 'src/generic.html',
+      filename: 'generic.html',
+      scriptLoading: 'defer',
+      minify: false
     }),
     new HtmlWebpackPlugin({
       template: 'src/elements.html',
-       filename: 'elements.html'
-     }),
+      filename: 'elements.html',
+      scriptLoading: 'defer',
+      minify: false
+    }),
     // new webpack.ProgressPlugin(), // display progress information while processing...
     // new webpack.DefinePlugin({
     //   'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH),
