@@ -356,7 +356,6 @@ template {
   box-sizing: border-box;
   --color-space-cadet-std: hsla(233, 22%, 23%,1);
   --color-space-cadet-wlight-oposit: hsla(53.1,22.4%,95%,1);
-  --default-serif-font: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif;
 }
 
 *,
@@ -368,6 +367,7 @@ template {
 html {
   font-size: 16pt;
   scroll-behavior: smooth;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 @media screen and (max-width: 1680px) {
@@ -395,78 +395,22 @@ html {
 }
 
 body {
-  /* font-family: "Merriweather", Georgia, serif; */
-  /* font-family: Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif; */
-  /* font-family: Georgia, Baskerville, "Bitstream Vera Serif", "DejaVu Serif", Iowan Old Style, Apple Garamond, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, serif; */
-  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-  font-family: var(--default-serif-font) !important;
   font-weight: 300;
   font-size: 1rem;
-  /* line-height: 2.375; */
   margin: 0;
   padding: 0;
   border: 0;
-  /* font: inherit; */
-  /* vertical-align: baseline; */
 }
 
-body {
-  background-color: #1e252d;
-  color: #212931;
-  background-image: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 80%), url(../img/intro-bg-1024.ea1fc942664ecbcee7d3.avif);
-  background-repeat: no-repeat;
-  background-size: cover, cover;
-  background-attachment: fixed, fixed;
-}
-
-@media screen and (min-width: 1200px) {
-    body {
-      background-image: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 80%), url(../img/intro-bg-1920.483ad602502ad6bcd215.avif);
-    }
-  }
-
-@media screen and (min-width: 1600px) and (-webkit-min-device-pixel-ratio: 1.25), screen and (min-width: 1600px) and (min-resolution: 120dpi) {
-    body {
-      background-image: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 80%), url(../img/intro-bg-full.12e8d6b1cd8b2252a8d7.avif);
-    }
-  }
-
-@media screen and (min-width: 1920px) {
-    body {
-      background-image: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 80%), url(../img/intro-bg-full.12e8d6b1cd8b2252a8d7.avif);
-    }
-  }
-
-@media only screen and (orientation: portrait) {
-    body {
-      background-image: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 80%), url(../img/intro-bg-up-1024.dd0770a990294f0f6552.avif);
-    }
-  }
-
-@media only screen and (orientation: portrait) and (min-width: 860px) {
-    body {
-      background-image: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 80%), url(../img/intro-bg-full-up.24cd10da515adaa3da59.avif);
-    }
-  }
-
-a {
-  color: #212931;
-  border-bottom-color: rgba(33, 41, 49, 0.5);
-  border-bottom: dotted 1px;
-  text-decoration: none;
-}
-
-a:hover {
-  border-bottom-color: transparent;
-  color: #18bfef !important;
+code, pre {
+  font-family: monospace;
 }
 
 ol {
   list-style: decimal;
   margin: 0 0 2rem 0;
   padding-left: 1.25rem;
-  line-height: 2.375;
+  /* line-height: 2.375; */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -497,7 +441,7 @@ h2 {
 p {
   text-align: justify;
   margin: 0 0 2rem 0;
-  line-height: 2.375;
+  /* line-height: 2.375; */
   /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
 }
 
@@ -525,149 +469,60 @@ hr {
   border-bottom-color: #eeeeee;
 }
 
-blockquote, q {
-  quotes: none;
-}
-
-blockquote {
-  border-left: solid 4px;
-  font-style: italic;
-  margin: 0 0 2rem 0;
-  padding: 0.5rem 0 0.5rem 2rem;
-}
-
-blockquote {
-  border-left-color: #eeeeee;
-  line-height: 2.375;
-}
-
-table {
-  margin: 0 0 2rem 0;
-  width: 100%;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-table thead {
-  border-bottom: solid 2px;
-}
-
-table thead {
-  border-bottom-color: #eeeeee;
-}
-
-table th {
+body {
+  background-color: #1e252d;
   color: #212931;
-}
-
-table th {
-  /* font-family: "Source Sans Pro", Helvetica, sans-serif; */
-  font-size: 0.8rem;
-  font-weight: 900;
-  letter-spacing: 0.075em;
-  line-height: 1.5;
-  padding: 0 0.75rem 0.75rem 0.75rem;
-  text-align: left;
-  text-transform: uppercase;
-}
-
-table tbody tr:nth-child(2n + 1) {
-  background-color: rgba(220, 220, 220, 0.25);
-}
-
-table tbody tr {
-  border: solid 1px;
-  border-left: 0;
-  border-right: 0;
-}
-
-table tbody tr {
-  border-color: #eeeeee;
-}
-
-table td {
-  padding: 0.75rem 0.75rem;
-}
-
-form {
-  margin: 0 0 2rem 0;
-}
-
-form > :last-child {
-  margin-bottom: 0;
-}
-
-input[type="text"], input[type="password"], input[type="email"], select, textarea {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background: transparent;
-  border-radius: 0;
-  border: solid 2px;
-  color: inherit;
-  display: block;
-  outline: 0;
-  padding: 0 1rem;
-  text-decoration: none;
-  width: 100%;
-}
-
-input[type="text"], input[type="password"], input[type="email"], select {
-  height: 3rem;
-}
-
-input[type="text"], input[type="password"], input[type="email"], select, textarea {
-  border-color: #eeeeee;
-}
-
-select {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2740%27 height=%2740%27 preserveAspectRatio=%27none%27 viewBox=%270 0 40 40%27%3E%3Cpath d=%27M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z%27 fill=%27%23eeeeee%27 /%3E%3C/svg%3E");
-}
-
-select {
-  background-size: 1.25rem;
+  background-image: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 80%) /*, url(../images/intro-bg-1024.avif)*/;
   background-repeat: no-repeat;
-  background-position: calc(100% - 1rem) center;
-  height: 3rem;
-  padding-right: 3rem;
-  text-overflow: ellipsis;
+  background-size: cover, cover;
+  background-attachment: fixed, fixed;
+
+  /* @media screen and (min-width: 1200px) {
+    & {
+      background-image: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 80%), url(../images/intro-bg-1920.avif);
+    }
+  }
+  
+  @media screen and (min-width: 1600px) and (min-resolution: 120dpi) {
+    & {
+      background-image: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 80%), url(../images/intro-bg-full.avif);
+    }
+  }
+  
+  @media screen and (min-width: 1920px) {
+    & {
+      background-image: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 80%), url(../images/intro-bg-full.avif);
+    }
+  }
+  
+  @media only screen and (orientation: portrait) {
+    & {
+      background-image: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 80%), url(../images/intro-bg-up-1024.avif);
+    }
+  }
+  
+  @media only screen and (orientation: portrait) and (min-width: 860px) {
+    & {
+      background-image: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 80%), url(../images/intro-bg-full-up.avif);
+    }
+  } */
 }
 
-input, select, textarea {
-  /* font-family: "Merriweather", Georgia, serif; */
-  font-weight: 300;
-  font-size: 1rem;
-  line-height: 2.375;
+a {
+  color: #212931;
+  border-bottom-color: rgba(33, 41, 49, 0.5);
+  border-bottom: dotted 1px;
+  text-decoration: none;
 }
 
-pre {
-  /* font-family: "Courier New", monospace; */
-  font-size: 0.9rem;
-  margin: 0 0 2rem 0;
+a:hover {
+  border-bottom-color: transparent;
+  color: #18bfef !important;
 }
 
-pre code {
-  display: block;
-  line-height: 1.75;
-  padding: 1rem 1.5rem;
-  overflow-x: auto;
-}
-
-code {
-  border: solid 2px;
-  /* font-family: "Courier New", monospace; */
-  font-size: 0.9rem;
-  margin: 0 0.25rem;
-  padding: 0.25rem 0.65rem;
-}
-
-code {
-  background: rgba(220, 220, 220, 0.25);
-  border-color: #eeeeee;
-}
+header p {
+    line-height: 2.375;
+  }
 
 #wrapper {
   position: relative;

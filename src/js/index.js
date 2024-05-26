@@ -1,16 +1,6 @@
-// import $ from 'jquery';
-import myesmodule from './myesmodule';
+// import myesmodule from './myesmodule';
 
-console.log(myesmodule);
-// console.log(mynodemodule);
-// console.log($);
-
-
-// Test parameter from .env file:
-// console.log(process.env.TEST);
-
-// Test global variable from webpack.DefinePlugin:
-// console.log(some.var);
+// console.log(myesmodule);
 
 const toggleMobileNavigation = document.getElementById('navPanelToggle');
 const navPanel = document.getElementById('navPanel');
@@ -64,6 +54,6 @@ function onPageScroll() {
 
 document.addEventListener('scroll', onPageScroll);
 
-setTimeout(() => {
-  document.body.classList.remove('is-preload');
-}, 100);
+// setTimeout(() => {
+//   document.body.classList.remove('is-preload');
+// }, 100);

@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/css/main.css":
@@ -8,6 +7,7 @@
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -18,23 +18,11 @@ __webpack_require__.r(__webpack_exports__);
 /*!*************************!*\
   !*** ./src/js/index.js ***!
   \*************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _myesmodule__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./myesmodule */ "./src/js/myesmodule.js");
-// import $ from 'jquery';
+// import myesmodule from './myesmodule';
 
-
-console.log(_myesmodule__WEBPACK_IMPORTED_MODULE_0__["default"]);
-// console.log(mynodemodule);
-// console.log($);
-
-
-// Test parameter from .env file:
-// console.log(process.env.TEST);
-
-// Test global variable from webpack.DefinePlugin:
-// console.log(some.var);
+// console.log(myesmodule);
 
 const toggleMobileNavigation = document.getElementById('navPanelToggle');
 const navPanel = document.getElementById('navPanel');
@@ -88,24 +76,9 @@ function onPageScroll() {
 
 document.addEventListener('scroll', onPageScroll);
 
-setTimeout(() => {
-  document.body.classList.remove('is-preload');
-}, 100);
-
-/***/ }),
-
-/***/ "./src/js/myesmodule.js":
-/*!******************************!*\
-  !*** ./src/js/myesmodule.js ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-// ES6 Module example
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("Ich bin ein ES6 Modul");
+// setTimeout(() => {
+//   document.body.classList.remove('is-preload');
+// }, 100);
 
 /***/ })
 
@@ -136,6 +109,18 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -166,13 +151,15 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/index.js */ "./src/js/index.js");
+/* harmony import */ var _js_index_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_index_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/main.css */ "./src/css/main.css");
 
 
