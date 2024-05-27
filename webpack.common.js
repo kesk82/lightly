@@ -1,10 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const Dotenv = require('dotenv-webpack');
-
-// const ASSET_PATH = process.env.ASSET_PATH || '/';
-// const ASSET_PATH = 'http://192.168.1.12/test/';
 
 module.exports = {
   entry: {
@@ -13,9 +9,8 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'js/[name].[hash].js',
+    filename: 'js/[name].[fullhash].js',
     chunkFilename: 'js/[name].[chunkhash].bundle.js',
-    //publicPath: ASSET_PATH,
     clean: true
   },
 
@@ -34,7 +29,7 @@ module.exports = {
         test: /\.(png|svg|jpg|gif|webp|avif)$/,
         type: 'asset/resource',
         generator: {
-            filename: 'img/[name].[hash][ext]',
+            filename: 'img/[name].[fullhash][ext]',
             //publicPath: ''
         },
       },
@@ -42,7 +37,7 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         type: 'asset/resource',
         generator: {
-            filename: 'fonts/[name].[hash][ext]',
+            filename: 'fonts/[name].[fullhash][ext]',
             //publicPath: ''
         },
       },
@@ -69,10 +64,6 @@ module.exports = {
       scriptLoading: 'defer',
       minify: false
     }),
-    // new webpack.ProgressPlugin(), // display progress information while processing...
-    // new webpack.DefinePlugin({
-    //   'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH),
-    //   'some.var': 123,
-    // }),
+    new webpack.ProgressPlugin(), // display progress information while processing...
   ]
 }

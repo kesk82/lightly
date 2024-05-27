@@ -1,52 +1,22 @@
 body {
-  background-color: #1e252d;
-  color: #212931;
-  background-image: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 80%) /*, url(../images/intro-bg-1024.avif)*/;
+  background-color: var(--body-background-color);
+  color: var(--body-text-color);
+  background-image: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 80%);
   background-repeat: no-repeat;
-  background-size: cover, cover;
-  background-attachment: fixed, fixed;
-
-  /* @media screen and (min-width: 1200px) {
-    & {
-      background-image: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 80%), url(../images/intro-bg-1920.avif);
-    }
-  }
-  
-  @media screen and (min-width: 1600px) and (min-resolution: 120dpi) {
-    & {
-      background-image: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 80%), url(../images/intro-bg-full.avif);
-    }
-  }
-  
-  @media screen and (min-width: 1920px) {
-    & {
-      background-image: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 80%), url(../images/intro-bg-full.avif);
-    }
-  }
-  
-  @media only screen and (orientation: portrait) {
-    & {
-      background-image: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 80%), url(../images/intro-bg-up-1024.avif);
-    }
-  }
-  
-  @media only screen and (orientation: portrait) and (min-width: 860px) {
-    & {
-      background-image: linear-gradient(to top, rgba(0,0,0,0) 0, rgba(0,0,0,.8) 80%), url(../images/intro-bg-full-up.avif);
-    }
-  } */
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 a {
-  color: #212931;
-  border-bottom-color: rgba(33, 41, 49, 0.5);
+  color: var(--body-text-color);
+  border-bottom-color: var(--link-bottom-border-color);
   border-bottom: dotted 1px;
   text-decoration: none;
 }
 
 a:hover {
   border-bottom-color: transparent;
-  color: #18bfef !important;
+  color: var(--body-link-hover-color) !important;
 }
 
 header {
@@ -70,7 +40,7 @@ header {
     pointer-events: none;
     transition: opacity 1s ease-in-out;
     transition-delay: 0.75s;
-    background: #1e252d;
+    background: var(--body-background-color);
     content: '';
     display: block;
     height: 100%;
@@ -88,7 +58,7 @@ header {
 }
 
 #intro {
-  color: #ffffff;
+  color: var(--light-text-color);
   padding: 8rem 4rem 6rem 4rem;
   align-items: center;
   display: flex;
@@ -108,7 +78,7 @@ header {
   }
 
   h1, h2, h3, h4, h5, h6 {
-    color: #ffffff;
+    color: var(--light-text-color);
   }
 
   p {
@@ -120,19 +90,19 @@ header {
   }
 
   a {
-    color: #ffffff;
+    color: var(--light-text-color);
     border-bottom-color: rgba(255, 255, 255, 0.5);
     line-height: 2.375;
   }
 
   a:hover {
     border-bottom-color: transparent;
-    color: #18bfef !important;
+    color: var(--body-link-hover-color) !important;
   }
 
   .actions .icon {
     background-color: rgba(0,0,0,.1);
-    box-shadow: inset 0 0 0 2px #ffffff, 0 0 12px rgba(0,0,0,8);
+    box-shadow: inset 0 0 0 2px var(--light-text-color), 0 0 12px rgba(0,0,0,8);
   }
 
   .button {
@@ -155,8 +125,8 @@ header {
     text-transform: uppercase;
     white-space: nowrap;
     background-color: transparent;
-    box-shadow: inset 0 0 0 2px #ffffff;
-    color: #ffffff !important;
+    box-shadow: inset 0 0 0 2px var(--light-text-color);
+    color: var(--light-text-color) !important;
 
     svg {
       transition: fill 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -181,16 +151,16 @@ header {
       left: 30%;
       width: 40%;
       height: 40%;
-      fill: #fff;
+      fill: var(--light-text-color);
     }
   }
 
   .button.icon.solo:hover {
-    box-shadow: inset 0 0 0 2px #18bfef;
-    color: #18bfef;
+    box-shadow: inset 0 0 0 2px var(--body-link-hover-color);
+    color: var(--body-link-hover-color);
   
     svg {
-      fill: #18bfef;
+      fill: var(--body-link-hover-color);
     }
   }
 
@@ -224,7 +194,7 @@ header {
 }
 
 #header {
-  color: #fff;
+  color: var(--light-text-color);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -244,7 +214,7 @@ header {
   .logo {
     transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
     pointer-events: auto;
-    border: 5px solid #fff;
+    border: 5px solid var(--light-text-color);
     /* font-family: "Source Sans Pro", Helvetica, sans-serif; */
     font-size: 2.25rem;
     font-weight: 900;
@@ -256,12 +226,12 @@ header {
   }
 
   .logo:hover {
-    border-color: #18bfef !important;
-    color: #18bfef !important;
+    border-color: var(--body-link-hover-color) !important;
+    color: var(--body-link-hover-color) !important;
   }
 
   a {
-    color: #fff;
+    color: var(--light-text-color);
   }
 
   #intro + & {
@@ -304,7 +274,7 @@ header {
 }
 
 #nav {
-  color: #fff;
+  color: var(--light-text-color);
   backdrop-filter: blur(10px);
   display: flex;
   background: rgba(255, 255, 255, .1);
@@ -360,16 +330,16 @@ header {
     }
 
     li.active {
-      background-color: #ffffff;
+      background-color: var(--light-text-color);
       border-top-left-radius: 6px;
       border-top-right-radius: 6px;
 
       a {
-        color: #1e252d;
+        color: var(--body-background-color);
       }
 
       a:hover {
-        color: #18bfef !important;
+        color: var(--body-link-hover-color) !important;
       }
     }
   }
@@ -381,7 +351,7 @@ header {
   }
 
   a {
-    color: #ffffff;
+    color: var(--light-text-color);
     border-bottom-color: rgba(255, 255, 255, 0.5);
   }
 
@@ -393,7 +363,7 @@ header {
 }
 
 #main {
-  background-color: #ffffff;
+  background-color: var(--light-text-color);
   position: relative;
   margin: 0 auto;
   width: calc(100% - 4rem);
@@ -444,7 +414,7 @@ header {
   }
   
   header.major .date:before, header.major .date:after {
-    border-top-color: #eeeeee;
+    border-top-color: var(--border-color);
   }
 
   header.major > :last-child {
@@ -506,8 +476,8 @@ header {
 
       .button {
         background-color: transparent;
-        box-shadow: inset 0 0 0 2px #212931;
-        color: #212931 !important;
+        box-shadow: inset 0 0 0 2px var(--body-text-color);
+        color: var(--body-text-color) !important;
       }
 
       .button.large {
@@ -552,7 +522,7 @@ header {
   
   & > * {
     padding: 4rem 4rem 2rem 4rem;
-    border-top: solid 2px #eeeeee;
+    border-top: solid 2px var(--border-color);
     margin: 0;
   }
 
@@ -567,8 +537,8 @@ header {
   
   & > .posts > article {
     text-align: center;
-    border-left: solid 2px #eee;
-    border-top: solid 2px #eee;
+    border-left: solid 2px var(--border-color);
+    border-top: solid 2px var(--border-color);
   }
   
   & > .posts > * {
@@ -637,15 +607,15 @@ header {
     padding: 0;
     
     a {
-      color: #212931 !important;
+      color: var(--body-text-color) !important;
 
       &.active {
-        background-color: #eeeeee;
+        background-color: var(--border-color);
       }
 
       &:hover {
-        color: #18bfef !important;
-        border-color: #18bfef;
+        color: var(--body-link-hover-color) !important;
+        border-color: var(--body-link-hover-color);
         z-index: 1;
       }
     }
@@ -666,7 +636,7 @@ header {
       text-align: center;
       text-decoration: none;
       text-transform: uppercase;
-      border-color: #eeeeee;
+      border-color: var(--border-color);
     }
 
     .next,
@@ -720,7 +690,7 @@ header {
     }
 
     & > .posts > article:nth-child(-n + 2) {
-      border-top: solid 2px #eee;
+      border-top: solid 2px var(--border-color);
     }
 
     & > .posts > article:nth-child(n) {
@@ -746,10 +716,9 @@ header {
 }
 
 #footer {
-  color: #717981;
   display: flex;
-  background-color: #f5f5f5;
-  color: #909498;
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
   cursor: default;
   position: relative;
   margin: 0 auto;
@@ -766,7 +735,7 @@ header {
 
 #copyright {
   position: relative;
-  color: rgba(255, 255, 255, 0.25);
+  color: var(--footer-text-color);
   cursor: default;
   /* font-family: "Source Sans Pro", Helvetica, sans-serif; */
   font-size: 0.8rem;
@@ -788,7 +757,7 @@ header {
   top: 0.75rem;
   right: 0.75rem;
   border: 0;
-  color: #ffffff;
+  color: var(--light-text-color);
   /* font-family: "Source Sans Pro", Helvetica, sans-serif; */
   font-size: 0.9rem;
   font-weight: 900;
@@ -801,7 +770,7 @@ header {
   &.alt {
     background-color: rgba(255, 255, 255, 0.875);
     box-shadow: 0 0.125rem 0.75rem 0 rgba(30, 37, 45, 0.25);
-    color: #212931;
+    color: var(--body-text-color);
   }
 
   @media screen and (max-width: 980px) {
@@ -823,9 +792,9 @@ header {
   transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
   display: none;
   -webkit-overflow-scrolling: touch;
-  background: #ffffff;
+  background: var(--light-text-color);
   box-shadow: none;
-  color: #212931;
+  color: var(--body-text-color);
   height: 100%;
   max-width: 80%;
   overflow-y: auto;
@@ -842,7 +811,7 @@ header {
     padding-left: 0;
 
     li {
-      border-top: solid 2px #eeeeee;
+      border-top: solid 2px var(--border-color);
 
       a {
         border-bottom: 0;
@@ -865,7 +834,7 @@ header {
 
   .icons {
     svg {
-      fill: #212931;
+      fill: var(--body-text-color);
     }
   }
 
@@ -902,7 +871,7 @@ header {
     svg {
       height: 2em;
       width: 2.2em;
-      fill: #fff;
+      fill: var(--light-text-color);
       display: inline-block;
       position: relative;
       top: .6em;

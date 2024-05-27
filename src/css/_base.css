@@ -2,6 +2,15 @@
   box-sizing: border-box;
   --color-space-cadet-std: hsla(233, 22%, 23%,1);
   --color-space-cadet-wlight-oposit: hsla(53.1,22.4%,95%,1);
+  --hr-line-color: #eeeeee;
+  --body-background-color: #1e252d;
+  --body-text-color: #212931;
+  --body-link-hover-color: #18bfef;
+  --light-text-color: #ffffff;
+  --border-color: #eeeeee;
+  --footer-bg-color: #210404;
+  --footer-text-color: #dce2e9;
+  --link-bottom-border-color: rgba(33, 41, 49, 0.5);
 }
 
 *,
@@ -112,5 +121,5 @@ hr {
 }
 
 hr {
-  border-bottom-color: #eeeeee;
+  border-bottom-color: var(--hr-line-color);
 }
