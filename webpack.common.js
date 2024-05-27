@@ -29,7 +29,7 @@ module.exports = {
         test: /\.(png|svg|jpg|gif|webp|avif)$/,
         type: 'asset/resource',
         generator: {
-            filename: 'img/[name].[fullhash][ext]',
+            filename: 'img/[name][ext]',
             //publicPath: ''
         },
       },
@@ -37,7 +37,7 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         type: 'asset/resource',
         generator: {
-            filename: 'fonts/[name].[fullhash][ext]',
+            filename: 'fonts/[name][ext]',
             //publicPath: ''
         },
       },
