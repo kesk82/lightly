@@ -1,12 +1,16 @@
-// import myesmodule from './myesmodule';
-
-// console.log(myesmodule);
-
 const toggleMobileNavigation = document.getElementById('navPanelToggle');
 const navPanel = document.getElementById('navPanel');
+const mainContent = document.getElementById('main');
 
 if (navPanel) {
   navPanel.style.display = 'block';
+
+  navPanel.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+    if (document.body.classList.contains('navPanel-visible')) {
+      document.body.classList.remove('navPanel-visible');
+    }
+  });
 }
 
 if (toggleMobileNavigation) {
@@ -22,38 +26,24 @@ if (toggleMobileNavigation) {
   });
 }
 
-// const showMoreBtn = document.querySelector('#intro .actions a');
-
-// if (showMoreBtn) {
-//   console.log("Found Show More BTN!");
-//   showMoreBtn.addEventListener('click', e => {
-//     e.preventDefault();
-//     console.log("Click Show More BTN!!!");
-//   });
-// }
-
 const introContainer = document.getElementById('intro');
 
 function onPageScroll() {
-  if (window.scrollY > 50) {
-    if (introContainer) {
-      introContainer.classList.add('hidden');
-    }
-    if (toggleMobileNavigation) {
+  if (toggleMobileNavigation && mainContent) {
+    if (window.scrollY > ( mainContent.offsetTop - toggleMobileNavigation.offsetTop - toggleMobileNavigation.offsetHeight )) {
       toggleMobileNavigation.classList.add('alt');
-    }
-  } else {
-    if (introContainer) {
-      introContainer.classList.remove('hidden');
-    }
-    if (toggleMobileNavigation) {
+    } else {
       toggleMobileNavigation.classList.remove('alt');
+    }
+  }
+
+  if (introContainer) {
+    if (window.scrollY > 50) {
+      introContainer.classList.add('hidden');
+    } else {
+      introContainer.classList.remove('hidden');
     }
   }
 }
 
 document.addEventListener('scroll', onPageScroll);
-
-// setTimeout(() => {
-//   document.body.classList.remove('is-preload');
-// }, 100);

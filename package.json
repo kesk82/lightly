@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=development --config webpack.prod.js",
-    "dev": "webpack-dev-server --mode=development --config webpack.dev.js --hot"
+    "start": "webpack-dev-server --mode=development --config webpack.dev.js --hot"
   },
   "keywords": [],
   "author": "Kemal Skripic",
