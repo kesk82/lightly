@@ -5,6 +5,7 @@ body {
   background-repeat: no-repeat, no-repeat;
   background-size: cover, 100%;
   background-attachment: fixed, fixed;
+  /* background-position: 0% 0%, 0% 0%; */
 }
 
 a {
@@ -14,10 +15,10 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+/* a:hover {
   border-bottom-color: transparent;
-  color: var(--body-link-hover-color) !important;
-}
+  color: var(--body-link-hover-color);
+} */
 
 header {
   p {
@@ -95,10 +96,10 @@ header {
     line-height: 2.375;
   }
 
-  a:hover {
+  /* a:hover {
     border-bottom-color: transparent;
     color: var(--body-link-hover-color) !important;
-  }
+  } */
 
   .actions .icon {
     background-color: rgba(0,0,0,.1);
@@ -155,14 +156,14 @@ header {
     }
   }
 
-  .button.icon.solo:hover {
+  /* .button.icon.solo:hover {
     box-shadow: inset 0 0 0 2px var(--body-link-hover-color);
     color: var(--body-link-hover-color);
   
     svg {
       fill: var(--body-link-hover-color);
     }
-  }
+  } */
 
   &.hidden {
     pointer-events: none;
@@ -225,10 +226,10 @@ header {
     visibility: visible;
   }
 
-  .logo:hover {
+  /* .logo:hover {
     border-color: var(--body-link-hover-color) !important;
     color: var(--body-link-hover-color) !important;
-  }
+  } */
 
   a {
     color: var(--light-text-color);
@@ -326,10 +327,10 @@ header {
         border-top-right-radius: 6px;
       }
 
-      a:hover {
+      /* a:hover {
         color: inherit !important;
         background-color: rgba(255, 255, 255, 0.1);
-      }
+      } */
     }
 
     li.active {
@@ -341,9 +342,9 @@ header {
         color: var(--body-text-color);
       }
 
-      a:hover {
+      /* a:hover {
         color: var(--body-link-hover-color) !important;
-      }
+      } */
     }
   }
 
@@ -616,11 +617,11 @@ header {
         background-color: var(--border-color);
       }
 
-      &:hover {
+      /* &:hover {
         color: var(--body-link-hover-color) !important;
         border-color: var(--body-link-hover-color);
         z-index: 1;
-      }
+      } */
     }
 
     a, span {

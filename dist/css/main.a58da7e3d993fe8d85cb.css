@@ -375,7 +375,7 @@ template {
   --hr-line-color: #eeeeee;
   --body-background-color: var(--main-color);
   --body-text-color: #222;
-  --body-link-hover-color: hsl(210, 80%, 30%);
+  --body-link-hover-color: var(--opposite-color-dark);
   --light-text-color: #ffffff;
   --border-color: #eeeeee;
   --footer-bg-color: var(--main-color-dark);
@@ -504,6 +504,7 @@ body {
   background-repeat: no-repeat, no-repeat;
   background-size: cover, 100%;
   background-attachment: fixed, fixed;
+  /* background-position: 0% 0%, 0% 0%; */
 }
 
 a {
@@ -513,10 +514,10 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+/* a:hover {
   border-bottom-color: transparent;
-  color: var(--body-link-hover-color) !important;
-}
+  color: var(--body-link-hover-color);
+} */
 
 header p {
     line-height: 2.375;
@@ -593,10 +594,10 @@ body.is-preload #wrapper.fade-in:before {
     line-height: 2.375;
   }
 
-#intro a:hover {
+/* a:hover {
     border-bottom-color: transparent;
     color: var(--body-link-hover-color) !important;
-  }
+  } */
 
 #intro .actions .icon {
     background-color: rgba(0,0,0,.1);
@@ -655,14 +656,14 @@ body.is-preload #wrapper.fade-in:before {
       fill: var(--light-text-color);
     }
 
-#intro .button.icon.solo:hover {
+/* .button.icon.solo:hover {
     box-shadow: inset 0 0 0 2px var(--body-link-hover-color);
     color: var(--body-link-hover-color);
-  }
-
-#intro .button.icon.solo:hover svg {
+  
+    svg {
       fill: var(--body-link-hover-color);
     }
+  } */
 
 #intro.hidden {
     pointer-events: none;
@@ -727,10 +728,10 @@ body.is-preload #wrapper.fade-in:before {
     visibility: visible;
   }
 
-#header .logo:hover {
+/* .logo:hover {
     border-color: var(--body-link-hover-color) !important;
     color: var(--body-link-hover-color) !important;
-  }
+  } */
 
 #header a {
     color: var(--light-text-color);
@@ -831,10 +832,10 @@ body.is-preload #wrapper.fade-in:before {
         border-top-right-radius: 6px;
       }
 
-#nav ul.links li a:hover {
+/* a:hover {
         color: inherit !important;
         background-color: rgba(255, 255, 255, 0.1);
-      }
+      } */
 
 #nav ul.links li.active {
       background-color: var(--light-text-color);
@@ -846,9 +847,9 @@ body.is-preload #wrapper.fade-in:before {
         color: var(--body-text-color);
       }
 
-#nav ul.links li.active a:hover {
+/* a:hover {
         color: var(--body-link-hover-color) !important;
-      }
+      } */
 
 #nav ul.icons {
     flex-grow: 0;
@@ -1123,11 +1124,11 @@ body.is-preload #wrapper.fade-in:before {
         background-color: var(--border-color);
       }
 
-#main .pagination a:hover {
+/* &:hover {
         color: var(--body-link-hover-color) !important;
         border-color: var(--body-link-hover-color);
         z-index: 1;
-      }
+      } */
 
 #main .pagination a, #main .pagination span {
       transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;

@@ -21,7 +21,7 @@
   --hr-line-color: #eeeeee;
   --body-background-color: var(--main-color);
   --body-text-color: #222;
-  --body-link-hover-color: hsl(210, 80%, 30%);
+  --body-link-hover-color: var(--opposite-color-dark);
   --light-text-color: #ffffff;
   --border-color: #eeeeee;
   --footer-bg-color: var(--main-color-dark);
